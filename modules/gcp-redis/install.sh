@@ -14,5 +14,5 @@ chmod +x /tmp/install.sh
 OUTPUT=$(sh /tmp/install.sh 2>&1)
 
 # Return JSON back to Terraform
-jq -n --arg output "$OUTPUT" '{"output":$output}'
+#jq -n --arg output "$OUTPUT" '{"output":$output}'
 
