@@ -8,6 +8,9 @@ terraform {
       source  = "humanitec/platform-orchestrator"
       version = ">= 2.10"
     }
+    test = {
+      source = "test/asdf"
+    }
   }
 }
 
