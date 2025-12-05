@@ -11,7 +11,7 @@ variable "runner_config" {
 }
 
 module "ecs_runner" {
-  source = "github.com/humanitec/reusable-platform-orchestrator-ecs-runner"
+  source = "github.com/humanitec/../turbodeveloper999/reusable-platform-orchestrator-ecs-runner"
 
   runner_id_prefix           = "ecs-runner"
   region                     = var.runner_config.region
